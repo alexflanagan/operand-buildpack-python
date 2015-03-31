@@ -160,6 +160,9 @@ source $BIN_DIR/steps/pip-uninstall
 # Mercurial support.
 source $BIN_DIR/steps/mercurial
 
+# Fortran test.
+gfortran --version
+
 # Pylibmc support.
 source $BIN_DIR/steps/pylibmc
 
