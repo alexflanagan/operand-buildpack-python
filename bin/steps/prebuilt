@@ -1,0 +1,14 @@
+# Installing prebuilt binaries. Called from bin/compile.
+puts-step "Installing prebuilt binaries."
+
+bpwatch start prebuilt_install
+
+echo $ROOT_DIR/vendor/numpy-1.9.2.linux-i686.tar.gz
+tar zxv -C .heroku/vendor $ROOT_DIR/vendor/numpy-1.9.2.linux-i686.tar.gz # TODO: restore later: &> /dev/null
+
+BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
+ROOT_DIR=$(dirname $BIN_DIR)
+
+bpwatch stop prebuilt_install
+
+echo
