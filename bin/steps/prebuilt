@@ -4,7 +4,7 @@ puts-step "Installing prebuilt binaries."
 #bpwatch start prebuilt_install
 
 PREBUILD_VENDORS=$(ls $(dirname $BIN_DIR)/vendor)
-echo $PREBUILD_VENDORS
+echo $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
 echo $(ls)
 
 tar zxv -C .heroku/vendor $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz # TODO: restore later: &> /dev/null
