@@ -7,8 +7,8 @@ PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 echo $(ls $PREBUILD_VENDORS)
 echo $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
 
-mkdir -p /.heroku/vendors
-echo $(ls /.heroku)
+echo $(ls /.app)
+echo $(ls /app)
 
 tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /.heroku/vendor # TODO: restore later: &> /dev/null
 
