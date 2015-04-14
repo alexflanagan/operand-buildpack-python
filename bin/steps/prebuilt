@@ -7,7 +7,9 @@ PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 echo $(ls $PREBUILD_VENDORS)
 echo $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
 
-tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C .heroku/vendor # TODO: restore later: &> /dev/null
+echo $(ls /.heroku)
+
+tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /.heroku/vendor # TODO: restore later: &> /dev/null
 
 bpwatch stop prebuilt_install
 
