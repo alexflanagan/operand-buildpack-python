@@ -3,6 +3,9 @@ puts-step "Installing prebuilt binaries."
 
 bpwatch start prebuilt_install
 
+# Syntax sugar.
+source $BIN_DIR/utils
+
 PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 
 # Make sure target exists.
@@ -12,8 +15,8 @@ mkdir -p /app/.heroku/vendor
 tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /app/.heroku/vendor &> /dev/null
 
 # Add rebuilds to path.
-export PYTHONPATH=$PYTHONPATH:/app/.heroku/vendor
+set-env PYTHONPATH=$PYTHONPATH:/app/.heroku/vendor
 
 bpwatch stop prebuilt_install
 
-echo
+echo $PYTHONPATH
