@@ -5,10 +5,14 @@ bpwatch start prebuilt_install
 
 PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 
+# Make sure target exists.
 mkdir -p /app/.heroku/vendor
-# echo $(ls -laF /app/.heroku)
 
-tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /app/.heroku/vendor # TODO: restore later: &> /dev/null
+# Expand prebuilt binaries.
+tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /app/.heroku/vendor &> /dev/null
+
+# Add rebuilds to path.
+export PYTHONPATH=$PYTHONPATH:/app/.heroku/vendor
 
 bpwatch stop prebuilt_install
 
