@@ -8,6 +8,8 @@ source $BIN_DIR/utils
 
 PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 
+echo $(ls -laF /app/.heroku/vendor/python)
+
 # Make sure target exists.
 mkdir -p /app/.heroku/vendor
 
