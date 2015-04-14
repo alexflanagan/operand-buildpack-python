@@ -9,7 +9,7 @@ echo $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
 
 echo $(ls -laF /app)
 
-tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /.heroku/vendor # TODO: restore later: &> /dev/null
+tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /app/.heroku/vendor # TODO: restore later: &> /dev/null
 
 bpwatch stop prebuilt_install
 
