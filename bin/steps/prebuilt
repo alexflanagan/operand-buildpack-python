@@ -8,22 +8,14 @@ source $BIN_DIR/utils
 
 PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 
-echo $(ls $PREBUILD_VENDORS)
-
-echo $(ls .heroku/vendor)
-echo $(ls /.heroku/vendor)
-echo $(ls /.app/vendor)
 
 echo "where is it"
-ls $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
+echo $(ls .heroku/vendor)
 echo "wisit test"
 
 # Expand prebuilt binaries.
 #tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /app/.heroku/python/lib/python2.7 &> /dev/null
 #pip install numpy-1.9.2.linux-i686.tar.gz
-
-# Add rebuilds to path.
-#set-env PYTHONPATH=$PYTHONPATH:/app/.heroku/vendor
 
 bpwatch stop prebuilt_install
 
