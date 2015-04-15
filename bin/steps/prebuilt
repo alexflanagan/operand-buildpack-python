@@ -8,7 +8,6 @@ source $BIN_DIR/utils
 
 PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 
-
 echo "where is it"
 echo $(ls .heroku/vendor)
 echo "wisit test"
