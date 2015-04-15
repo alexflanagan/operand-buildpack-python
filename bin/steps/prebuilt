@@ -14,7 +14,7 @@ PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 #mkdir -p /app/.heroku/vendor
 
 echo $PREBUILD_VENDORS
-echo $(ls)
+echo $(find / | egrep numpy-1.9.2.linux-i686.tar.gz)
 echo $(ls $PREBUILD_VENDORS)
 echo $(ls -laF $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz)
 
