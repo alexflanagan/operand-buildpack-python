@@ -13,6 +13,9 @@ PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 # Make sure target exists.
 #mkdir -p /app/.heroku/vendor
 
+echo $PREBUILD_VENDORS
+echo $(ls $PREBUILD_VENDORS)
+
 # Expand prebuilt binaries.
 #tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /app/.heroku/python/lib/python2.7 &> /dev/null
 pip install $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
