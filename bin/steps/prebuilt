@@ -10,14 +10,15 @@ PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 
 echo "where is it"
 echo $(find / | egrep numpy)
-echo "wisit test - python:"
-python -c "import numpy"
 echo "Tests complete."
 echo $PREBUILD_VENDORS
 
-# Expand prebuilt binaries.
+echo "Expanding prebuilt binaries..."
 #tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /app/.heroku/python/lib/python2.7 &> /dev/null
 pip install $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
+
+echo "wisit test - python:"
+python -c "import numpy"
 
 bpwatch stop prebuilt_install
 
