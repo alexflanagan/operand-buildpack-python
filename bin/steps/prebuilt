@@ -9,21 +9,13 @@ source $BIN_DIR/utils
 PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
 
-echo "Removing..."
-rm -rf /app/.heroku
-echo "Removed."
-
 echo ".heroku contents:"
-ls -laF /app/.heroku
-
-echo "Looking..."
-echo $(find /app | egrep numpy)
-echo $(pwd)
+find /app/.heroku
 
 echo "Expanding prebuilt binaries..."
 tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-x86_64.tar.gz -C $PREFIX # &> /dev/null
 
-printf "Testing numpy..." && python -c "import numpy" && echo "OK"
+printf "Testing numpy..." && python -c "import numpy" && echo "[OK]"
 
 bpwatch stop prebuilt_install
 
