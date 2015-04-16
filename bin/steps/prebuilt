@@ -9,13 +9,14 @@ source $BIN_DIR/utils
 PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 
 echo "Prefix:"
-python -c "import sys; print sys.prefix"
-
-echo $(ls -laF /app/.heroku/vendor)
+PREFIX=$(python -c "import sys; print sys.prefix")
+echo $PREFIX
 
 echo "Expanding prebuilt binaries..."
-#tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /app/.heroku/python/lib/python2.7 &> /dev/null
-pip install $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
+tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C $PREFIX # &> /dev/null
+#pip install $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
+
+echo $(ls -laF /app/.heroku/vendor)
 
 echo "Testing numpy..."
 python -c "import numpy"
