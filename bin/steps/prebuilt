@@ -10,6 +10,8 @@ echo "Looking..."
 echo $(find /app | egrep numpy)
 echo $(pwd)
 
+rm -rf /app/.heroku/vendor/numpy
+
 PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
 
