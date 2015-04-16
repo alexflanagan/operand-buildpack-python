@@ -6,6 +6,9 @@ bpwatch start prebuilt_install
 # Syntax sugar.
 source $BIN_DIR/utils
 
+echo "Looking..."
+echo $(find /app | egrep numpy)
+
 PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
 
