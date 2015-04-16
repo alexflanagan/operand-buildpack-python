@@ -10,7 +10,7 @@ PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
 
 echo ".heroku contents:"
-find /app/.heroku
+find /app/.heroku | egrep numpy
 
 echo "Expanding prebuilt binaries..."
 # tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-x86_64.tar.gz -C $PREFIX # &> /dev/null
