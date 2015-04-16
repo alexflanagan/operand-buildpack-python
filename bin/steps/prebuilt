@@ -13,7 +13,7 @@ PREFIX=$(python -c "import sys; print sys.prefix")
 echo $PREFIX
 
 echo "Expanding prebuilt binaries..."
-tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C $PREFIX # &> /dev/null
+#tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C $PREFIX # &> /dev/null
 #pip install $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
 
 echo $(ls -laF /app/.heroku/vendor)
