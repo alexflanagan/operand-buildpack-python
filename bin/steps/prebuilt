@@ -9,7 +9,7 @@ source $BIN_DIR/utils
 PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 
 echo "where is it"
-echo $(ls .heroku/vendor)
+echo $(find / | egrep numpy)
 echo "wisit test - python:"
 python -c "import numpy"
 echo "Tests complete."
