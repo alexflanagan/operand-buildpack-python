@@ -8,6 +8,9 @@ source $BIN_DIR/utils
 
 PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 
+echo "Prefix:"
+python -c "import sys; print sys.prefix"
+
 echo $(ls -laF /app/.heroku/vendor)
 
 echo "Expanding prebuilt binaries..."
