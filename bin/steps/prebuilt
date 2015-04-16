@@ -6,16 +6,19 @@ bpwatch start prebuilt_install
 # Syntax sugar.
 source $BIN_DIR/utils
 
+PREBUILD_VENDORS=/app/.heroku/vendor
+PREFIX=$(python -c "import sys; print sys.prefix")
+
 echo "Removing..."
-rm -rf /app/.heroku/python/vagrant/numpy
+rm -rf /app/.heroku
 echo "Removed."
+
+echo ".heroku contents:"
+ls -laF /app/.heroku
 
 echo "Looking..."
 echo $(find /app | egrep numpy)
 echo $(pwd)
-
-PREBUILD_VENDORS=/app/.heroku/vendor
-PREFIX=$(python -c "import sys; print sys.prefix")
 
 echo "Expanding prebuilt binaries..."
 tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-x86_64.tar.gz -C $PREFIX # &> /dev/null
