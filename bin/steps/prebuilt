@@ -9,11 +9,13 @@ source $BIN_DIR/utils
 PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
 
+rm -rf /app/.heroku
+
 echo ".heroku contents:"
-#find /app/.heroku
+find /app/.heroku
 
 echo "Expanding prebuilt binaries..."
-tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-x86_64.tar.gz -C $PREFIX # &> /dev/null
+# tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-x86_64.tar.gz -C $PREFIX # &> /dev/null
 
 bpwatch stop prebuilt_install
 
