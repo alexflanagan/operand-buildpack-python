@@ -172,6 +172,9 @@ source $BIN_DIR/steps/prebuilt
 # Install dependencies with Pip.
 source $BIN_DIR/steps/pip-install
 
+# Test install.
+printf "Testing numpy: " && python -c "import numpy" && echo "[OK]"
+
 # Django collectstatic support.
 sub-env $BIN_DIR/steps/collectstatic
 
