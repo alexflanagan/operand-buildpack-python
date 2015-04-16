@@ -6,11 +6,13 @@ bpwatch start prebuilt_install
 # Syntax sugar.
 source $BIN_DIR/utils
 
+echo "Removing..."
+rm -rf /app/.heroku/python/vagrant/numpy
+echo "Removed."
+
 echo "Looking..."
 echo $(find /app | egrep numpy)
 echo $(pwd)
-
-rm -rf /app/.heroku/vendor/vagrant
 
 PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
