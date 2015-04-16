@@ -8,6 +8,7 @@ source $BIN_DIR/utils
 
 echo "Looking..."
 echo $(find /app | egrep numpy)
+echo $(pwd)
 
 PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
