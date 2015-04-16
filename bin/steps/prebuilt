@@ -15,7 +15,5 @@ find /app/.heroku
 echo "Expanding prebuilt binaries..."
 tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-x86_64.tar.gz -C $PREFIX # &> /dev/null
 
-printf "Testing numpy..." && python -c "import numpy" && echo "[OK]"
-
 bpwatch stop prebuilt_install
 
