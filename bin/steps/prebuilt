@@ -6,20 +6,13 @@ bpwatch start prebuilt_install
 # Syntax sugar.
 source $BIN_DIR/utils
 
-PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
-
-echo "Prefix:"
+PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
-echo $PREFIX
 
 echo "Expanding prebuilt binaries..."
-#tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C $PREFIX # &> /dev/null
-#pip install $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz
+tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C $PREFIX # &> /dev/null
 
-echo $(ls -laF /app/.heroku/vendor)
-
-echo "Testing numpy..."
-python -c "import numpy"
+printf "Testing numpy..." && python -c "import numpy" && echo "OK"
 
 bpwatch stop prebuilt_install
 
