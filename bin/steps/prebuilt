@@ -8,7 +8,7 @@ source $BIN_DIR/utils
 
 PREBUILD_VENDORS=$(dirname $BIN_DIR)/vendor
 
-echo $(ls -laF /app)
+echo $(ls -laF /app/.heroku)
 
 echo "Expanding prebuilt binaries..."
 #tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-i686.tar.gz -C /app/.heroku/python/lib/python2.7 &> /dev/null
