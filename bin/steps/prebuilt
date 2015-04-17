@@ -12,9 +12,12 @@ echo $(python --version)
 PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
 
+echo ".heroku contents pre"
+find /app/.heroku | egrep numpy
+
 mv /app/.heroku/python/vagrant/numpy/operand_venv/lib/python2.7/site-packages/numpy* /app/.heroku/python/lib/python2.7/site-packages
 
-echo ".heroku contents:"
+echo ".heroku contents post"
 find /app/.heroku | egrep numpy
 
 echo "Expanding prebuilt binaries..."
