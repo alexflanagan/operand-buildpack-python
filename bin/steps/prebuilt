@@ -9,6 +9,8 @@ source $BIN_DIR/utils
 PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
 
+mv /app/.heroku/python/vagrant/numpy/operand_venv/lib/python2.7/site-packages/numpy* /app/.heroku/python/lib/python2.7/site-packages
+
 echo ".heroku contents:"
 find /app/.heroku | egrep numpy
 
