@@ -9,6 +9,9 @@ source $BIN_DIR/utils
 echo "Python version:"
 echo $(python --version)
 
+echo "Python unicode support:"
+echo $(python -c "import sys; print sys.maxunicode")
+
 PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
 
