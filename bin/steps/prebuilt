@@ -18,6 +18,8 @@ PREFIX=$(python -c "import sys; print sys.prefix")
 echo ".heroku contents pre"
 find /app/.heroku | egrep numpy
 
+pip install numpy
+
 #mv /app/.heroku/python/vagrant/numpy/operand_venv/lib/python2.7/site-packages/numpy* /app/.heroku/python/lib/python2.7/site-packages
 #echo ".heroku contents post"
 #find /app/.heroku | egrep numpy
