@@ -16,7 +16,7 @@ PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
 
 echo ".heroku contents pre"
-rm -rf /app/.heroku
+#rm -rf /app/.heroku
 find /app/.heroku | egrep numpy
 
 pip install numpy
