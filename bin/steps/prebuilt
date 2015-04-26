@@ -16,10 +16,9 @@ PREBUILD_VENDORS=/app/.heroku/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
 
 echo ".heroku contents pre"
-rm -rf /cache
-rm -rf /app/.heroku/python/vagrant/numpy
-rm -rf /app/.heroku/python/lib/python2.7/site-packages/numpy*
-rm -rf /app/.heroku/vendor/numpy-1.9.2.linux-x86_64.tar.gz
+#rm -rf /app/.heroku/python/vagrant/numpy
+#rm -rf /app/.heroku/python/lib/python2.7/site-packages/numpy*
+#rm -rf /app/.heroku/vendor/numpy-1.9.2.linux-x86_64.tar.gz
 find / | egrep numpy
 
 pip install numpy
