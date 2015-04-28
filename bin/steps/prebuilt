@@ -22,6 +22,12 @@ echo ".heroku contents pre"
 #find / | egrep numpy
 
 pip install numpy
+pip install scipy
+pip install pandas
+pip install flask
+pip install scikit-learn
+
+pip freeze > prebuilt.txt
 
 #mv /app/.heroku/python/vagrant/numpy/operand_venv/lib/python2.7/site-packages/numpy* /app/.heroku/python/lib/python2.7/site-packages
 #echo ".heroku contents post"
