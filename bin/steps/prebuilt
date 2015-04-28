@@ -21,10 +21,10 @@ echo ".heroku contents pre"
 #rm -rf /app/.heroku/vendor/numpy-1.9.2.linux-x86_64.tar.gz
 #find / | egrep numpy
 
-pip install numpy
-pip install scipy
-pip install pandas
-pip install flask
+#pip install numpy
+#pip install scipy
+#pip install pandas
+#pip install flask
 pip install scikit-learn
 
 pip freeze > prebuilt.txt
