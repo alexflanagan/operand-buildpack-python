@@ -7,21 +7,21 @@ bpwatch start prebuilt_install
 source $BIN_DIR/utils
 
 printf "Python version: "
-echo $(python --version)
+python --version
 
 #echo "Python unicode support:"
 #echo $(python -c "import sys; print sys.maxunicode")
 
-PREBUILD_VENDORS=/app/.heroku/vendor
+PREBUILD_VENDORS=/tmp/buildpacks/custom/vendor
 PREFIX=$(python -c "import sys; print sys.prefix")
-echo $PREFIX
+#echo $PREFIX
 
 #echo ".heroku contents pre"
 #rm -rf /app/.heroku/python/vagrant/numpy
 #rm -rf /app/.heroku/python/lib/python2.7/site-packages/numpy*
 #rm -rf /app/.heroku/vendor/numpy-1.9.2.linux-x86_64.tar.gz
-find / | egrep numpy
-#/tmp/buildpacks/custom/vendor/numpy-1.9.2.linux-x86_64.tar.gz
+#find / | egrep numpy
+#
 #pip install numpy
 #pip install scipy
 #pip install pandas
@@ -30,12 +30,8 @@ find / | egrep numpy
 
 #pip freeze > prebuilt.txt
 
-#mv /app/.heroku/python/vagrant/numpy/operand_venv/lib/python2.7/site-packages/numpy* /app/.heroku/python/lib/python2.7/site-packages
-#echo ".heroku contents post"
-#find /app/.heroku | egrep numpy
-
 echo "Expanding prebuilt binaries..."
-#tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-x86_64.tar.gz -C $PREFIX # &> /dev/null
+tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-x86_64.tar.gz -C $PREFIX # &> /dev/null
 
 bpwatch stop prebuilt_install
 
