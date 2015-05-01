@@ -166,6 +166,9 @@ source $BIN_DIR/steps/pylibmc
 # Libffi support.
 source $BIN_DIR/steps/cryptography
 
+# Install gfortran.
+source $BIN_DIR/steps/gfortran-fetch-and-install.sh
+
 # Install prebuilt binaries.
 source $BIN_DIR/steps/prebuilt
 
