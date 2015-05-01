@@ -167,7 +167,7 @@ source $BIN_DIR/steps/pylibmc
 source $BIN_DIR/steps/cryptography
 
 # Install gfortran.
-source $BIN_DIR/steps/gfortran-fetch-and-install.sh
+source $BIN_DIR/steps/gfortran-fetch-and-install.sh 4.8
 
 # Install prebuilt binaries.
 source $BIN_DIR/steps/prebuilt
