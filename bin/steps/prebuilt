@@ -22,7 +22,7 @@ PREFIX=$(python -c "import sys; print sys.prefix")
 #rm -rf /app/.heroku/python/lib/python2.7/site-packages/numpy*
 #rm -rf /cache
 #rm -rf /app/.heroku/vendor/numpy-1.9.2.linux-x86_64.tar.gz
-find / | egrep numpy
+#find / | egrep numpy
 #
 pip install --upgrade pip
 pip install numpy
