@@ -24,6 +24,7 @@ PREFIX=$(python -c "import sys; print sys.prefix")
 #rm -rf /app/.heroku/vendor/numpy-1.9.2.linux-x86_64.tar.gz
 #find / | egrep numpy
 #
+sudo apt-get install libblas-dev libatlas-dev liblapack-dev
 pip install --upgrade pip
 pip install numpy
 pip install scipy
