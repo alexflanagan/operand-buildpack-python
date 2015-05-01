@@ -20,7 +20,7 @@ PREFIX=$(python -c "import sys; print sys.prefix")
 #rm -rf /app/.heroku/python/vagrant/numpy
 #rm -rf /app/.heroku/python/lib/python2.7/site-packages/numpy*
 #rm -rf /app/.heroku/vendor/numpy-1.9.2.linux-x86_64.tar.gz
-#find / | egrep numpy
+find / | egrep numpy
 #
 pip install --upgrade pip
 pip install numpy
@@ -32,7 +32,7 @@ pip install scipy
 #pip freeze > prebuilt.txt
 
 echo "Expanding prebuilt binaries..."
-tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-x86_64.tar.gz -C $PREFIX # &> /dev/null
+#tar -xzvf $PREBUILD_VENDORS/numpy-1.9.2.linux-x86_64.tar.gz -C $PREFIX # &> /dev/null
 
 bpwatch stop prebuilt_install
 
