@@ -24,10 +24,6 @@ PREFIX=$(python -c "import sys; print sys.prefix")
 #rm -rf /app/.heroku/vendor/numpy-1.9.2.linux-x86_64.tar.gz
 #find / | egrep numpy
 
-#apt-get install libblas-dev libatlas-dev liblapack-dev
-#$(wget -O - http://gfortran.com/download/x86_64/gfortran-fetch-and-install.sh) | sh
-wget -O - http://gfortran.com/download/x86_64/gfortran-fetch-and-install.sh | bash -s 4.8
-
 wget http://www.netlib.org/blas/blas.tgz
 tar xzf blas.tgz
 cd BLAS
