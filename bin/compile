@@ -166,6 +166,9 @@ source $BIN_DIR/steps/pylibmc
 # Libffi support.
 source $BIN_DIR/steps/cryptography
 
+# Install patchelf
+source $BIN_DIR/steps/patchelf
+
 # Install gfortran.
 source $BIN_DIR/steps/gfortran-fetch-and-install.sh 4.8
 

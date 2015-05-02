@@ -1,0 +1,16 @@
+# Installing patchelf. Called from bin/compile.
+puts-step "Installing patchelf."
+
+# Syntax sugar.
+source $BIN_DIR/utils
+
+bpwatch start patchelf_install
+
+wget http://nixos.org/releases/patchelf/patchelf-0.8/patchelf-0.8.tar.bz2
+tar xf patchelf-0.8.tar.bz2
+cd patchelf-0.8/
+./configure --prefix="/app/.operand/patchelf"
+make install
+
+bpwatch stop patchelf_install
+
