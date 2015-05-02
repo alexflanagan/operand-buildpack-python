@@ -40,8 +40,8 @@ PREFIX=$(python -c "import sys; print sys.prefix")
 pip install --upgrade pip
 pip install numpy
 #pip install scipy
-pip install pandas
-pip install flask
+#pip install pandas
+#pip install flask
 pip install scikit-learn
 
 pip freeze > prebuilt.txt
