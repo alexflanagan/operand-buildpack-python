@@ -12,6 +12,7 @@ cd patchelf-0.8/
 ./configure --prefix="/app/.operand/patchelf"
 make install
 export PATH=$PATH:/app/.operand/patchelf/bin
+cd ..
 
 bpwatch stop patchelf_install
 
