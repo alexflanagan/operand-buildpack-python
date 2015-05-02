@@ -170,7 +170,7 @@ source $BIN_DIR/steps/cryptography
 source $BIN_DIR/steps/patchelf
 
 # Install gfortran.
-source $BIN_DIR/steps/gfortran-fetch-and-install.sh 5
+source $BIN_DIR/steps/gfortran-fetch-and-install.sh 4.9.2
 
 # Install prebuilt binaries.
 source $BIN_DIR/steps/prebuilt
