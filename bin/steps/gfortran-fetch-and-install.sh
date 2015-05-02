@@ -3,7 +3,7 @@
 
 #instdir="/usr/local/gfortran-bin"
 instdir="/app/.operand/gfortran"
-export PATH=$PATH:$instdir
+export PATH=$PATH:$instdir/bin
 arch="x86_64"
 
 if [ $# -eq 0 -o "$1" == "-h" -o "$1" == "--help" ]; then
@@ -129,5 +129,3 @@ while [ $# -gt 0 ]; do
   echo ""
 done
 
-find $instdir
-exit 1;
