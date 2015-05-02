@@ -129,3 +129,4 @@ while [ $# -gt 0 ]; do
   echo ""
 done
 
+find $instdir
