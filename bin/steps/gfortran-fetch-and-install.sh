@@ -3,6 +3,11 @@
 
 #instdir="/usr/local/gfortran-bin"
 instdir="/app/.operand/gfortran"
+
+find $instdir
+
+exit 1;
+
 export PATH=$PATH:$instdir
 arch="x86_64"
 
