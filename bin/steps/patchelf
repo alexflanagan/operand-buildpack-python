@@ -11,6 +11,7 @@ tar xf patchelf-0.8.tar.bz2
 cd patchelf-0.8/
 ./configure --prefix="/app/.operand/patchelf"
 make install
+export PATH=$PATH:/app/.operand/patchelf/bin
 
 bpwatch stop patchelf_install
 
