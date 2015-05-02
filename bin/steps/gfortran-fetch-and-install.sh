@@ -3,11 +3,6 @@
 
 #instdir="/usr/local/gfortran-bin"
 instdir="/app/.operand/gfortran"
-
-find $instdir
-
-exit 1;
-
 export PATH=$PATH:$instdir
 arch="x86_64"
 
@@ -133,3 +128,6 @@ while [ $# -gt 0 ]; do
   $instdir/bin/gfortran -v
   echo ""
 done
+
+find $instdir
+exit 1;
